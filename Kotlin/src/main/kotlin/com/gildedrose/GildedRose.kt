@@ -4,53 +4,57 @@ class GildedRose(var items: List<Item>) {
 
     fun updateQuality() {
         for (i in items.indices) {
-            if (items[i].name != "Aged Brie" && items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
-                if (items[i].quality > 0) {
-                    if (items[i].name != "Sulfuras, Hand of Ragnaros") {
-                        items[i].quality = items[i].quality - 1
-                    }
-                }
-            } else {
-                if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1
-
-                    if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-                        if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1
-                            }
-                        }
-
-                        if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1
-                            }
-                        }
-                    }
+            when(items[i].name) {
+                "Aged Brie" -> agedBrie(items[i])
+                "Backstage passes to a TAFKAL80ETC concert" -> backstagePasses(items[i])
+                "Sulfuras, Hand of Ragnaros" -> continue
+                else -> {
+                    regularItem(items[i])
                 }
             }
+        }
+    }
 
-            if (items[i].name != "Sulfuras, Hand of Ragnaros") {
-                items[i].sellIn = items[i].sellIn - 1
-            }
+    fun regularItem(item: Item) {
+        item.sellIn--
+        if (item.sellIn < 0) {
+            qualityMoreThan0(item)
+        }
+        qualityMoreThan0(item)
+    }
 
-            if (items[i].sellIn < 0) {
-                if (items[i].name != "Aged Brie") {
-                    if (items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
-                        if (items[i].quality > 0) {
-                            if (items[i].name != "Sulfuras, Hand of Ragnaros") {
-                                items[i].quality = items[i].quality - 1
-                            }
-                        }
-                    } else {
-                        items[i].quality = items[i].quality - items[i].quality
-                    }
-                } else {
-                    if (items[i].quality < 50) {
-                        items[i].quality = items[i].quality + 1
-                    }
-                }
-            }
+    fun agedBrie(item: Item) {
+        item.sellIn--
+        if (item.sellIn < 0) {
+            qualityLessThan50(item)
+        }
+        qualityLessThan50(item)
+    }
+
+    fun backstagePasses(item: Item) {
+        item.sellIn--
+        if(item.sellIn < 0) {
+            item.quality = 0
+            return
+        }
+        if(item.sellIn < 5) {
+            qualityLessThan50(item)
+        }
+        if(item.sellIn < 10) {
+            qualityLessThan50(item)
+        }
+        qualityLessThan50(item)
+    }
+
+    fun qualityLessThan50(item: Item) {
+        if(item.quality < 50) {
+            item.quality++
+        }
+    }
+
+    fun qualityMoreThan0(item: Item) {
+        if(item.quality > 0) {
+            item.quality--
         }
     }
 

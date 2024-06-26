@@ -14,7 +14,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun regularItemExpiredPositiveQuality1() {
+    fun regularItemExpired0DaysPositiveQuality() {
         val items = listOf(Item("foo", 0, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -22,7 +22,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun regularItemExpiredPositiveQuality2() {
+    fun regularItemExpiredNegativeDaysPositiveQuality() {
         val items = listOf(Item("foo", -1, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -38,7 +38,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun regularItemExpiredZeroQuality1() {
+    fun regularItemExpired0Days0Quality() {
         val items = listOf(Item("foo", 0, 0))
         val app = GildedRose(items)
         app.updateQuality()
@@ -46,7 +46,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun regularItemExpiredZeroQuality2() {
+    fun regularItemExpiredNegativeDaysZeroQuality() {
         val items = listOf(Item("foo", -1, 0))
         val app = GildedRose(items)
         app.updateQuality()
@@ -70,7 +70,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun agedBrieExpiredPositiveQuality2() {
+    fun agedBrieExpiredNegativeDaysPositiveQuality() {
         val items = listOf(Item("Aged Brie", -1, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -94,7 +94,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun agedBrieExpiredZeroQuality2() {
+    fun agedBrieExpiredNegativeDaysZeroQuality() {
         val items = listOf(Item("Aged Brie", -1, 0))
         val app = GildedRose(items)
         app.updateQuality()
@@ -118,7 +118,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun agedBrieExpiredFiftyQuality2() {
+    fun agedBrieExpiredNegativeDaysFiftyQuality() {
         val items = listOf(Item("Aged Brie", -1, 50))
         val app = GildedRose(items)
         app.updateQuality()
@@ -286,7 +286,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun sellIn_regularItem1() {
+    fun sellIn_regularItemPositiveSellIn() {
         val items = listOf(Item("foo", 2, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -294,7 +294,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun sellIn_regularItem2() {
+    fun sellIn_regularItem0SellIn() {
         val items = listOf(Item("foo", 0, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -302,7 +302,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun sellIn_agedBrie1() {
+    fun sellIn_agedBriePositiveSellIn() {
         val items = listOf(Item("Aged Brie", 2, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -310,7 +310,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun sellIn_agedBrie2() {
+    fun sellIn_agedBrie0SellIn() {
         val items = listOf(Item("Aged Brie", 0, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -326,7 +326,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun sellIn_backstagePasses1() {
+    fun sellIn_backstagePassesPositiveSellIn() {
         val items = listOf(Item("Backstage passes to a TAFKAL80ETC concert", 2, 10))
         val app = GildedRose(items)
         app.updateQuality()
@@ -334,7 +334,7 @@ internal class GildedRoseTest {
     }
 
     @Test
-    fun sellIn_backstagePasses2() {
+    fun sellIn_backstagePasses0SellIn() {
         val items = listOf(Item("Backstage passes to a TAFKAL80ETC concert", 0, 10))
         val app = GildedRose(items)
         app.updateQuality()
