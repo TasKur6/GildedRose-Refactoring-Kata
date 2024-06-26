@@ -11,8 +11,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(9, app.items[0].quality)
-        assertEquals(1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -21,8 +19,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(8, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -31,8 +27,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(8, app.items[0].quality)
-        assertEquals(-2, app.items[0].sellIn)
-
     }
 
     @Test
@@ -41,8 +35,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -51,8 +43,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -61,8 +51,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(-2, app.items[0].sellIn)
-
     }
 
     @Test
@@ -71,8 +59,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(11, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -81,8 +67,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(12, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -91,8 +75,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(12, app.items[0].quality)
-        assertEquals(-2, app.items[0].sellIn)
-
     }
 
     @Test
@@ -101,8 +83,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(1, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -111,8 +91,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(2, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -121,8 +99,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(2, app.items[0].quality)
-        assertEquals(-2, app.items[0].sellIn)
-
     }
 
     @Test
@@ -131,8 +107,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -141,8 +115,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -151,8 +123,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(-2, app.items[0].sellIn)
-
     }
 
     @Test
@@ -161,8 +131,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(80, app.items[0].quality)
-        assertEquals(0, app.items[0].sellIn)
-
     }
 
     @Test
@@ -171,8 +139,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(21, app.items[0].quality)
-        assertEquals(10, app.items[0].sellIn)
-
     }
 
     @Test
@@ -181,8 +147,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(22, app.items[0].quality)
-        assertEquals(9, app.items[0].sellIn)
-
     }
 
     @Test
@@ -191,8 +155,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(22, app.items[0].quality)
-        assertEquals(8, app.items[0].sellIn)
-
     }
 
     @Test
@@ -201,8 +163,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(23, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -211,8 +171,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(23, app.items[0].quality)
-        assertEquals(3, app.items[0].sellIn)
-
     }
 
     @Test
@@ -221,8 +179,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -231,8 +187,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(-2, app.items[0].sellIn)
-
     }
 
     @Test
@@ -241,8 +195,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(1, app.items[0].quality)
-        assertEquals(10, app.items[0].sellIn)
-
     }
 
     @Test
@@ -251,8 +203,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(2, app.items[0].quality)
-        assertEquals(9, app.items[0].sellIn)
-
     }
 
     @Test
@@ -261,8 +211,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(2, app.items[0].quality)
-        assertEquals(8, app.items[0].sellIn)
-
     }
 
     @Test
@@ -271,8 +219,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(3, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -281,8 +227,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(3, app.items[0].quality)
-        assertEquals(3, app.items[0].sellIn)
-
     }
 
     @Test
@@ -291,8 +235,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
     @Test
@@ -301,8 +243,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(10, app.items[0].sellIn)
-
     }
 
     @Test
@@ -311,8 +251,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(9, app.items[0].sellIn)
-
     }
 
     @Test
@@ -321,8 +259,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(8, app.items[0].sellIn)
-
     }
 
     @Test
@@ -331,8 +267,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(4, app.items[0].sellIn)
-
     }
 
     @Test
@@ -341,8 +275,6 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(50, app.items[0].quality)
-        assertEquals(3, app.items[0].sellIn)
-
     }
 
     @Test
@@ -351,10 +283,63 @@ internal class GildedRoseTest {
         val app = GildedRose(items)
         app.updateQuality()
         assertEquals(0, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-
     }
 
+    @Test
+    fun sellIn_regularItem1() {
+        val items = listOf(Item("foo", 2, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(1, app.items[0].sellIn)
+    }
+
+    @Test
+    fun sellIn_regularItem2() {
+        val items = listOf(Item("foo", 0, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(-1, app.items[0].sellIn)
+    }
+
+    @Test
+    fun sellIn_agedBrie1() {
+        val items = listOf(Item("Aged Brie", 2, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(1, app.items[0].sellIn)
+    }
+
+    @Test
+    fun sellIn_agedBrie2() {
+        val items = listOf(Item("Aged Brie", 0, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(-1, app.items[0].sellIn)
+    }
+
+    @Test
+    fun sellIn_sulfuras() {
+        val items = listOf(Item("Sulfuras, Hand of Ragnaros", 2, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(2, app.items[0].sellIn)
+    }
+
+    @Test
+    fun sellIn_backstagePasses1() {
+        val items = listOf(Item("Backstage passes to a TAFKAL80ETC concert", 2, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(1, app.items[0].sellIn)
+    }
+
+    @Test
+    fun sellIn_backstagePasses2() {
+        val items = listOf(Item("Backstage passes to a TAFKAL80ETC concert", 0, 10))
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(-1, app.items[0].sellIn)
+    }
 }
 
 
