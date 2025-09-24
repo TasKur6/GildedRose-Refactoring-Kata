@@ -8,6 +8,7 @@
     "pretest": "rimraf app/**/*.js test/**/*.js",
     "test:jest": "jest",
     "test:jest:watch": "jest --watchAll",
+    "unitTest": "jest test/jest/gilded-rose.spec.ts",
     "test:mocha": "nyc mocha",
     "test:vitest": "vitest --coverage"
   },

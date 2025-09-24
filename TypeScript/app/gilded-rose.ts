@@ -19,28 +19,24 @@ export class GildedRose {
 
   updateQuality() {
     for (const currentItem of this.items) {
-      if (currentItem.name === 'Aged Brie') {
+      if (currentItem.name === 'Aged Brie' || currentItem.name === 'Backstage passes to a TAFKAL80ETC concert') {
         currentItem.quality++;
-      } else if (currentItem.name != 'Aged Brie' && currentItem.name != 'Backstage passes to a TAFKAL80ETC concert') {
-        if (currentItem.quality > 0) {
-          if (currentItem.name != 'Sulfuras, Hand of Ragnaros') {
-            currentItem.quality = currentItem.quality - 1
+        if (currentItem.name == 'Backstage passes to a TAFKAL80ETC concert') {
+          if (currentItem.sellIn < 11) {
+            if (currentItem.quality < 50) {
+              currentItem.quality = currentItem.quality + 1
+            }
+          }
+          if (currentItem.sellIn < 6) {
+            if (currentItem.quality < 50) {
+              currentItem.quality = currentItem.quality + 1
+            }
           }
         }
       } else {
-        if (currentItem.quality < 50) {
-          currentItem.quality = currentItem.quality + 1
-          if (currentItem.name == 'Backstage passes to a TAFKAL80ETC concert') {
-            if (currentItem.sellIn < 11) {
-              if (currentItem.quality < 50) {
-                currentItem.quality = currentItem.quality + 1
-              }
-            }
-            if (currentItem.sellIn < 6) {
-              if (currentItem.quality < 50) {
-                currentItem.quality = currentItem.quality + 1
-              }
-            }
+        if (currentItem.quality > 0) {
+          if (currentItem.name != 'Sulfuras, Hand of Ragnaros') {
+            currentItem.quality = currentItem.quality - 1
           }
         }
       }
@@ -66,7 +62,7 @@ export class GildedRose {
       }
 
       if (currentItem.name !== 'Sulfuras, Hand of Ragnaros') {
-        currentItem.quality = Math.min(currentItem.quality,50);
+        currentItem.quality = Math.min(currentItem.quality, 50);
       }
     };
 
