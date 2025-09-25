@@ -13,10 +13,22 @@ describe('Gilded Rose updateQuality', () => {
     expect(items[0].quality).toBe(50);
   });
 
-  it('Backstage Passes quality should increase', () => {
-    const gildedRose = new GildedRose([new Item('Aged Brie', 13, 44)]);
+  it('Backstage Passes quality should increase by 1 if sellIn > 10', () => {
+    const gildedRose = new GildedRose([new Item('Backstage passes to Phoebe Bridgers', 13, 44)]);
     const items = gildedRose.updateQuality();
-    expect(items[0].quality).toBeGreaterThan(44);
+    expect(items[0].quality).toBe(45);
+  });
+
+  it('Backstage Passes quality should increase by 2 if sellIn <= 10', () => {
+    const gildedRose = new GildedRose([new Item('Backstage passes to Coldplay', 10, 44)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(46);
+  });
+
+  it('Backstage Passes quality should increase by 3 if sellIn <= 5', () => {
+    const gildedRose = new GildedRose([new Item('Backstage passes to Green Day', 5, 44)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(47);
   });
 });
 

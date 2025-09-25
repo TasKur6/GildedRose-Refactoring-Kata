@@ -19,24 +19,17 @@ export class GildedRose {
 
   updateQuality() {
     for (const currentItem of this.items) {
-      if (currentItem.name === 'Aged Brie' || currentItem.name === 'Backstage passes to a TAFKAL80ETC concert') {
+      if (currentItem.name === 'Aged Brie' || currentItem.name.startsWith('Backstage pass')) {
         currentItem.quality++;
-        if (currentItem.name == 'Backstage passes to a TAFKAL80ETC concert') {
-          if (currentItem.sellIn < 11) {
-            if (currentItem.quality < 50) {
-              currentItem.quality = currentItem.quality + 1
-            }
-          }
-          if (currentItem.sellIn < 6) {
-            if (currentItem.quality < 50) {
-              currentItem.quality = currentItem.quality + 1
-            }
+        if (currentItem.name.startsWith('Backstage pass')) {
+          if (currentItem.sellIn <= 10) {
+            currentItem.quality += currentItem.sellIn <= 5 ? 2 : 1;
           }
         }
       } else {
         if (currentItem.quality > 0) {
           if (currentItem.name != 'Sulfuras, Hand of Ragnaros') {
-            currentItem.quality = currentItem.quality - 1
+            currentItem.quality = currentItem.quality - 1;
           }
         }
       }
@@ -45,10 +38,10 @@ export class GildedRose {
       }
       if (currentItem.sellIn < 0) {
         if (currentItem.name != 'Aged Brie') {
-          if (currentItem.name != 'Backstage passes to a TAFKAL80ETC concert') {
+          if (!currentItem.name.startsWith('Backstage pass')) {
             if (currentItem.quality > 0) {
               if (currentItem.name != 'Sulfuras, Hand of Ragnaros') {
-                currentItem.quality = currentItem.quality - 1
+                currentItem.quality = currentItem.quality - 1;
               }
             }
           } else {
@@ -56,7 +49,7 @@ export class GildedRose {
           }
         } else {
           if (currentItem.quality < 50) {
-            currentItem.quality = currentItem.quality + 1
+            currentItem.quality = currentItem.quality + 1;
           }
         }
       }
